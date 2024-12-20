@@ -34,7 +34,7 @@ describe('AddThreadUseCase', () => {
     // Assert
     expect(addedThread).toStrictEqual(new AddedThread({
       id: 'thread-123',
-      title: 'A thread Failed',
+      title: 'A thread',
       owner: 'user-123',
     }));
 
