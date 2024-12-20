@@ -34,7 +34,7 @@ describe('AddCommentUseCase', () => {
 
     // Assert
     expect(addedComment).toStrictEqual(new AddedComment({
-      id: 'comment-123',
+      id: 'comment-123 SALAH',
       content: 'A comment',
       owner: 'user-123',
     }));
