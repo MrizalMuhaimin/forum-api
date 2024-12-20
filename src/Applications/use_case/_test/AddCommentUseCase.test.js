@@ -35,8 +35,8 @@ describe('AddCommentUseCase', () => {
     // Assert
     expect(addedComment).toStrictEqual(new AddedComment({
       id: 'comment-SALAH',
-      content: 'A comment',
-      owner: 'user-123',
+      content: 'A comment SALAH',
+      owner: 'user-123 SALAH',
     }));
 
     expect(mockThreadRepository.checkThreadAvailability).toBeCalledWith('thread-123');
