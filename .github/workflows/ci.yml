@@ -18,9 +18,9 @@ jobs:
       postgres:
         image: postgres
         env:
-         POSTGRES_USER: postgres
-         POSTGRES_PASSWORD: Muhaimin136
-         POSTGRES_DB: forumapi_test
+         POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+         POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+         POSTGRES_DB: ${{ secrets.POSTGRES_DB_TEST }}
          
         options: >-
           --health-cmd pg_isready
@@ -47,9 +47,9 @@ jobs:
         PORT: 3000
         PGHOST: localhost
         PGPORT: 5432
-        PGUSER: postgres
-        PGPASSWORD: Muhaimin136
-        PGDATABASE: forumapi_test
+        PGUSER: ${{ secrets.POSTGRES_USER }}
+        PGPASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+        PGDATABASE: ${{ secrets.POSTGRES_DB_TEST }}
         ACCESS_TOKEN_KEY: secret
         REFRESH_TOKEN_KEY: terces
         ACCESS_TOKEN_AGE: 3600
